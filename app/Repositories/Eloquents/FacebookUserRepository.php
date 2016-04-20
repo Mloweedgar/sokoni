@@ -2,7 +2,7 @@
 
 namespace App\Repositories\Eloquents;
 
-use App\User;
+use App\Models\User;
 
 class FacebookUserRepository {
 
