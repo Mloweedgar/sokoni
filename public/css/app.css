@@ -5,15 +5,9 @@ body {
 	margin-right: 60px;
 }
 
-a {
+a, a:hover {
 	color: #252525;
 	text-decoration: none;
-}
-
-a:hover {
-	color: #000000;
-	text-decoration: none;
-	font-weight: bold;
 }
 
 #app-layout {
@@ -53,6 +47,30 @@ a:hover {
 	background: transparent;
 	color; #9e9e9e;
 }
+
+.app-fb-btn {
+	margin-top: 10px;
+	background: #3C5A98;
+	color: #ffffff;
+}
+
+.app-fb-btn:hover {
+	color: #ffffff;
+	background: #355088;
+	font-weight: normal;
+}
+
+.app-google-btn {
+	margin-top: 10px;
+	background: #d34836;
+	color: #ffffff;
+}
+
+.app-google-btn:hover {
+	color: #ffffff;
+	font-weight: normal;
+}
+
 
 .fa-btn {
     margin-right: 6px;
