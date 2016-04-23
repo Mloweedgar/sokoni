@@ -20,7 +20,7 @@
                     <!-- Left Side Of Navbar -->
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right nav-top">
                         <li><a href="{{ url('/') }}">Home</a></li>
                         <!-- Authentication Links -->
                         @if (Auth::guest())

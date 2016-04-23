@@ -1,4 +1,4 @@
-<!--footer navigation-->
+        <!--footer navigation-->
         <div class="app-footer-nav">
             <div class="container">
                 <div class="row">
@@ -16,7 +16,7 @@
 
         <!--footer links-->
 
-        <div class="app-footer-links">
+        <div class="app-footer-links" style="margin-top: 20px;">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
@@ -84,7 +84,7 @@
         </div>
 
         <!--footer-->
-        <div class="app-footer">
+        <div class="app-footer" style="margin-top: 20px;">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-8">
@@ -92,7 +92,7 @@
                         <p>You can't afford what you are dying for? Dont give up on yourself! Earn shopping points for unlimited shopping discount. All you need is to tell a friend to tell a friend You can't afford what you are dying for? Dont give up on yourself! Earn shopping points for unlimited shopping discount.</p>
                     </div>
                     <div class="col-sm-offset-1 col-sm-3">
-                            <h5 style="padding-top: 20px;"><a href="#">CREDITS</a>&nbsp|&nbsp<a href="#">PRIVACY</a>&nbsp|&nbsp<a href="#">CONTACT</a></h5>
+                            <h5 style="padding-top: 20px;"><a href="#">CREDITS</a>&nbsp;|&nbsp;<a href="#">PRIVACY</a>&nbsp;|&nbsp;<a href="#">CONTACT</a></h5>
                             <p>Designed by Mkomwa Rajab</p>
                             <p>+255658 879 834</p>
                     </div>
