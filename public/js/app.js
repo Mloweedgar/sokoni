@@ -11,7 +11,6 @@ $(document).ready(function() {
 			if(layer_id == '#layer1') {
 
 				$('#col1-layer1').animate({left: "0%", width: "40%", "font-size": "12px", "padding-top": "10px"});
-				
 				setTimeout(function() {
 					$('#col2-layer1').css("display", "block");
 				}, 600);

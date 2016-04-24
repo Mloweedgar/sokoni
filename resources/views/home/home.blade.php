@@ -3,14 +3,9 @@
 @section('content')
 
 <!-- featured shop-->
-<div class="container" style="margin-top: 20px;">
-	<div class="row app-shop-header">
-		<div class="col-sm-5 app-header-line-left"></div>
-		<div class="col-sm-2"><h4 class="text-center">Featured Shops</h4></div>
-		<div class="col-sm-5 app-header-line-right"></div>
-	</div>
-
-	<div class="row">
+<div class="container" style="margin-top: 40px;">
+	@include('shop')
+	<!--<div class="row">
 		<div class="col-sm-12">
 			<div id="myCarousel" class="carousel slide app-carousel">
 				<div class="carousel-inner app-shop-inner">
@@ -19,51 +14,47 @@
 					</div>
 					<div class="item">
 						@include('shop')
-					</div>
+					</div>-->
 					<!-- Carousel nav -->
-					<a class="carousel-control left app-carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+					<!--<a class="carousel-control left app-carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
 					<a class="carousel-control right app-carousel-control" href="#myCarousel"	data-slide="next">&rsaquo;</a>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 </div>
 
 <div class="container" style="margin-top: 20px;">
 	<!--featured-->
 	<div class="row app-featured">
 			<div class="col-sm-8">
-				<h4 style="color: #252525; font-weight: 20px;">FEATURED PRODUCTS</h4>
-				<div id="myCarousel" class="carousel slide">
-					<!--indicator-->
-					<ol class="carousel-indicators">
-						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-						<li data-target="#myCarousel" data-slide-to="1"></li>
-						<li data-target="#myCarousel" data-slide-to="2"></li>
-					</ol>
-					<div class="carousel-inner">
-						<div class="item active">
-							<div class="thumbnail">
-								<img src="photos/index.jpeg"  width=100%>
+				<!--<h4 style="color: #252525; font-weight: 20px;">FEATURED PRODUCTS</h4>-->
+				<div id="myCarousel" class="carousel slide app-featured-carousel">
+					<!--<div class="">-->
+						<!--indicator-->
+						<ol class="carousel-indicators">
+							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#myCarousel" data-slide-to="1"></li>
+							<li data-target="#myCarousel" data-slide-to="2"></li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="item active">
+								<img src="photos/reebook.png"  width="100%" height="400">
+							</div>
+							<div class="item">
+								<img src="photos/fashonista.png"  width="100%" height="400">
+							</div>
+							<div class="item">
+								<img src="photos/index.jpeg"  width="100%" height="400">
 							</div>
 						</div>
-						<div class="item">
-							<div class="thumbnail">
-								<img src="photos/index.jpeg " height=300px width=100%>
-							</div>
-						</div>
-						<div class="item">
-							<div class="thumbnail">
-								<img src="photos/index.jpeg " height=300px width=100%>
-							</div>
-						</div>
-					</div>
+					<!--</div>-->
 				</div>
 			</div>
 			<div class="col-sm-4">
 				<div class="row">
 					<div class="col-sm-12">
-						<div class="panel panel-default">
+						<div class="panel panel-default app-bonus">
 							<div class="panel-body">
 								<h3 style="color: #252525; font-weight: 20px;">EARN BONUS SHOPPING POINTS</h3>
 								<p style="color: #00B996;">
