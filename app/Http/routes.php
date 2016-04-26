@@ -20,3 +20,25 @@ Route::get('/facebookLogin', 'Auth\FacebookAuthController@facebookLogin');
 Route::get('shop', function() {
 	return view('shopv2');
 });
+
+
+//for emails
+Route::get('sendemail', function () {
+
+    $data = array(
+        'name' => "Sokoni project!",
+    );
+
+    Mail::send('emails.welcome', $data, function ($message) {
+
+        $message->from('mloweedgar0@gmail.com', 'Sokoni project!');
+        
+        	//here you can write the email of the recipient.
+        $message->to('nobbyand1@gmail.com')->subject('Whats up Welcome to sokoni site');
+
+    });
+
+    return "Your email has been sent successfully";
+
+});
+
