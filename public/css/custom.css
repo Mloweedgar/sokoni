@@ -9,50 +9,7 @@ body {
 }
 
 
-.cat-header {
-	margin-top: 5px;
-}
 
-.shop-header {
-	margin-top: 5px;
-}
-
-
-.shop-nav {
-	background: #252525;
-	border-radius: 15px;
-	color: #ffffff;
-	padding-top: 10px;
-	padding-bottom: 15px;
-	border-left: solid 5px #252525;
-}
-
-
-.shop-nav > h4 {
-	padding-left: 15px;
-}
-.shop-link > li > a {
-	color: #ffffff;
-	border-left: solid 5px #252525;
-}
-
-.sub-shop-link > li > a {
-	color: #ffffff;
-	margin-left: 10px;
-	border-left: solid 3px #252525;
-}
-
-.sub-shop-link > li > a:hover {
-	border-left: solid 3px #ffffff;
-}
-
-.shop-link > li > a:hover {
-	border-left: solid 5px #ffffff;
-}
-.shop-link > li > a:focus {
-	background: #252525;
-	border-left: solid 5px #ffffff;
-}
 
 
 .pic:hover {

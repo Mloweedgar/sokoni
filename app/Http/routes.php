@@ -17,6 +17,4 @@ Route::auth();
 
 Route::get('/facebookLogin', 'Auth\FacebookAuthController@facebookLogin');
 
-Route::get('shop', function() {
-	return view('shopv2');
-});
+Route::get('/shop/{id}', 'Shop\ShopController@getShop');

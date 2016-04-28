@@ -8,7 +8,16 @@
 					CATEGORIES
 				</button>
 				<ul class="dropdown-menu">
-					<li><a href="">Category 1</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-hover" data-toggle="dropdown" role="button">
+							Category 1
+						</a>
+
+						<ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Wishlist</a></li>
+                            <li><a href="#">My Account</a></li>
+                        </ul>
+					</li>
 					<li><a href="">Category 2</a></li>
 					<li><a href="">Category 3</a></li>
 					<li><a href="">Category 4</a></li>

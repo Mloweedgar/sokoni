@@ -5,16 +5,21 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 
+use App\Http\Controllers\Shop\ShopController as Shop;
+
 class HomeController extends Controller
 {
+
+    protected $shop;
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Shop $shop)
     {
         //$this->middleware('auth');
+        $this->shop = $shop;
     }
 
     /**
@@ -24,6 +29,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home.home');
+        $shop_list = $this->shop->getShopList();
+
+        return view('home.home')->with(['shop_list' => $shop_list]);
     }
 }

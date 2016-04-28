@@ -4,24 +4,44 @@
 
 <!-- featured shop-->
 <div class="container" style="margin-top: 40px;">
-	@include('shop')
-	<!--<div class="row">
+	<div class="row">
 		<div class="col-sm-12">
 			<div id="myCarousel" class="carousel slide app-carousel">
 				<div class="carousel-inner app-shop-inner">
-					<div class="item active">
-						@include('shop')
-					</div>
-					<div class="item">
-						@include('shop')
-					</div>-->
+					<?php $a = $b = 1;?>
+					@for($a = 1; $a <= 4; $a++)
+						<div class="item{{$a == 1 ? ' active': ''}}">
+							<div class="row">
+								@for($b = 1; $b <= 4; $b++)
+								<div class="col-sm-3">
+									<div class="panel panel-default shop-panel">	
+										<div class="panel-body text-center">
+											<div class="shop-name-upper">
+												<h4>{{strtoupper($shop_list[$a][$b]['shop_name'])}}</h4>
+											</div>
+											<div class="shop-img">
+												<i class="fa fa-desktop fa-5x" aria-hidden="true"></i>
+											</div>
+											<div class="shop-name-lower">
+												<h4>{{strtoupper($shop_list[$a][$b]['shop_name'])}}</h4>
+											</div>	
+											<div class="shop-slider-link">
+												<a  href="{{url('shop/'.$shop_list[$a][$b]['id'])}}" class="btn btn-primary shop-link-btn">VISIT SHOP</a>
+											</div>
+										</div>								
+									</div>
+								</div>
+								@endfor
+							</div>
+						</div>
+					@endfor
 					<!-- Carousel nav -->
-					<!--<a class="carousel-control left app-carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+					<a class="carousel-control left app-carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
 					<a class="carousel-control right app-carousel-control" href="#myCarousel"	data-slide="next">&rsaquo;</a>
 				</div>
 			</div>
 		</div>
-	</div>-->
+	</div>
 </div>
 
 <div class="container" style="margin-top: 20px;">

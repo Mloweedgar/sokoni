@@ -1,9 +1,9 @@
 
 		<div class="row">
-			<div class="col-sm-12">
+			<div class="col-sm-12" style="margin-left: 15px; margin-right: 17px;">
 				<div class="outer-layer">
 					<div class="layer" id="layer1">
-						<div class="text-center col1" id="col1-layer1">									
+						<div class="text-center col1" id="col1-layer1" style="background-image: url('{{asset('photos/index.png')}}'');">									
 							<div class="logo">shop</div>										
 							<div class="shop-name">
 								<span>Shop name</span>
