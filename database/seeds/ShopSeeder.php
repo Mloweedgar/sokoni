@@ -17,7 +17,8 @@ class ShopSeeder extends Seeder
 
         	DB::table('shops')->insert([
         		'shop_name' => 'Shop-'.$i,
-        		'shop_logo' => 'images/logo/shop-'.$i
+        		'shop_logo' => 'images/logo/shop-'.$i,
+                'region' => 'Dar es Salaam',
         		]);
         }
     }

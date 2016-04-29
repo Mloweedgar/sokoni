@@ -33,8 +33,8 @@ class Shops {
 				$j = 1;
 			}
 
-			$shop_array[$i][$j]['shop_name'] = $value->shop_name;
 			$shop_array[$i][$j]['id'] = $value->id;
+			$shop_array[$i][$j]['shop_name'] = $value->shop_name;
 			
 
 			$j++;

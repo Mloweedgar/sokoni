@@ -17,9 +17,9 @@ Route::auth();
 
 Route::get('/facebookLogin', 'Auth\FacebookAuthController@facebookLogin');
 
-<<<<<<< HEAD
+
 Route::get('/shop/{id}', 'Shop\ShopController@getShop');
-=======
+
 Route::get('shop', function() {
 	return view('shopv2');
 });
@@ -45,4 +45,3 @@ Route::get('sendemail', function () {
 
 });
 
->>>>>>> 27d99df5a55fae838c17d9df6eab4e4f11ebc29c

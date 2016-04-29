@@ -7,20 +7,32 @@
 					<i class="fa fa-list" aria-hidden="true"></i>&nbsp;
 					CATEGORIES
 				</button>
-				<ul class="dropdown-menu">
+				<ul class="dropdown-menu category-menu">
+					@for($j =1; $j <= 3; $j++)
 					<li class="dropdown">
-						<a href="#" class="dropdown-hover" data-toggle="dropdown" role="button">
-							Category 1
+						<a href="#" data-toggle="dropdown" role="button">
+							Category {{$j}}
 						</a>
 
-						<ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Wishlist</a></li>
-                            <li><a href="#">My Account</a></li>
+						<ul class="dropdown-menu subcategory-menu" role="menu">
+                            
+                            <div class="row">
+                            	@for($a = 1; $a <= 4; $a++)
+                            	<div class="col-sm-3">
+                            		<h4>subCategory</h4>
+                            		<ul class="nav nav-stacked">
+                            			<li><a href="#">brand1</a></li>
+                            			<li><a href="#">brand1</a></li>
+                            			<li><a href="#">brand1</a></li>
+                            			<li><a href="#">brand1</a></li>
+                            		</ul>
+                            	</div>
+                            	@endfor
+                            </div>
+                            
                         </ul>
 					</li>
-					<li><a href="">Category 2</a></li>
-					<li><a href="">Category 3</a></li>
-					<li><a href="">Category 4</a></li>
+					@endfor
 				</ul>
 			</div>
 		</div>

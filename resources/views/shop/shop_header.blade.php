@@ -1,10 +1,10 @@
 <div class="row">
-			<div class="col-sm-1 center-block">
+			<div class="col-sm-2 center-block">
 				<div class="text-center shop-logo">
 					<i class="fa fa-bicycle fa-5x" aria-hidden="true"></i>
 				</div>
 			</div>
-			<div class="col-sm-11">
+			<div class="col-sm-10">
 				<div class="row">
 					<div class="col-sm-3">
 						<h4><strong>{{$shop->shop_name}}</strong></h4>
@@ -41,31 +41,34 @@
 						</ul>
 					</div>
 				</div>
+
 				<div class="row">
 					<div class="col-sm-12">
-						<div style="border: solid 1px #ddd;"></div>
+						<div style="border-bottom: solid 1px #ddd;"></div>
 					</div>
 				</div>
 				
 				<div class="row" style="margin-top: 10px;">
 					<div class="col-sm-3" style="">
-						<div style="margin-bottom: 20px;">Dar es Salaam, Tanzania</div>
+						<div style="margin-bottom: 20px;">{{$shop->region}}, Tanzania</div>
 						
 					</div>
 					<div class="col-sm-9">
 						<ul class="list-inline pull-right">
-							<li>
+							<li class="shop-rating">
 								@include('shop.shop_rating')
 							</li>
-							<li>
-								<span class="badge">22</span>
-								reviews
+							<li class="shop-review">
+								<a href="#">
+									<span class="badge">22</span>
+									reviews
+								</a>
 							</li>
-							<li>
+							<li class="shop-like">
 								<span class="badge">22</span>
 								<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
 							</li>
-							<li>
+							<li class="shop-dislike">
 								<span class="badge">22</span>
 								<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
 							</li>
@@ -73,4 +76,4 @@
 					</div>
 				</div>
 			</div>
-		</div>
+</div>

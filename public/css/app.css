@@ -1,9 +1,10 @@
 body {
     font-family: 'Quicksand', sans-serif;
     background: #DDDDDD;
-    margin-left: 60px;
-	margin-right: 60px;
+    margin-left: 70px;
+	margin-right: 70px;
 }
+
 
 .app-nav {
 	border-bottom: solid 1px #252525;
@@ -84,13 +85,11 @@ body {
 .app-header-line-left {
 	border-bottom: solid 1px #ddd; 
 	margin-top: 20px; 
-	padding-left: 15px;
 }
 
 .app-header-line-right {
 	border-bottom: solid 1px #ddd; 
 	margin-top: 20px; 
-	padding-right: 15px;
 }
 
 .app-carousel {
@@ -176,6 +175,7 @@ body {
 
 .app-bonus-footer > a {
 	color: #ffffff;
+	text-decoration: none;
 }
 
 .app-signup {
@@ -183,7 +183,8 @@ body {
 	text-align: center;
 	padding-top: 5px;
 	padding-bottom: 5px;
-	height: 300px;
+	height: 320px;
+	margin-top: 10px;
 }
 
 .app-signup p {
@@ -196,6 +197,11 @@ body {
 	text-decoration-style: dashed;
 }
 
+.signup-btn {
+
+	margin-top: 30px;
+}
+
 .app-btn {
 	background: #252525;
 	border: solid 1px #252525;
@@ -206,7 +212,7 @@ body {
 	border: solid 1px #000000;
 }
 
-.app-brand-header, .app-featured, .app-shop-header {
+.app-brand-header, .app-shop-header {
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
@@ -218,15 +224,21 @@ body {
 	padding-bottom: 20px;
 }
 
-.app-featured-carousel {
-	
-	border: solid 1px #DDDDDD;
-	border-radius: 5px;
-	padding: 1px;
-}
 
 .app-featured {
-	height: 600px;
+
+	height: 650px;
+}
+
+.featured-price {
+
+	color: #00B996;
+}
+
+.carousel-indicators li {
+
+	background: #252525;
+	border-color: #252525;
 }
 
 .app-thumbnail {
@@ -252,6 +264,16 @@ a {
 	border-bottom: solid 2px #252525;
 }
 
+.dropdown:hover .category-menu{
+
+	display: block;
+}
+
+.category-menu:hover .subcategory-menu {
+
+	display: block;
+}
+
 .dropdown-menu {
 	width: 100%;
 	border-top-left-radius: 0px;
@@ -266,6 +288,17 @@ a {
  	padding-top: 10px;
  	padding-bottom: 10px;
  	border-bottom: solid 1px #DDDDDD;
+ }
+
+ .subcategory-menu {
+
+ 	left: 100%;
+ 	top: 0%;
+ 	height: auto;
+ 	width: 950px;
+ 	padding-left: 30px;
+ 	padding-top: 10px;
+ 	padding-bottom: 10px;
  }
 
  .app-shop-panel {
@@ -344,9 +377,42 @@ a {
  	padding-top: 12px;
  }
 
- .shop-rating {
- 	margin-top: 20px;
+ .shop-rating,
+ .shop-like,
+ .shop-dislike {
+
+ 	color: #777;
+ 	font-size: 15px;
  }
+
+ .shop-rating:hover,
+ .shop-like:hover,
+ .shop-dislike:hover,
+ .shop-review > a:hover {
+
+ 	color: #252525;
+ }
+
+ .shop-review > a {
+
+ 	color: #777;
+ 	text-decoration: none;
+ }
+
+ .badge {
+
+ 	border-radius: 4px;
+ }
+
+ .shop-like:hover .badge,
+ .shop-dislike:hover .badge,
+ .shop-review:hover .badge
+  {
+
+ 	background: #252525;
+ }
+
+
 
  .col2 {
  	position: absolute;
@@ -395,6 +461,11 @@ a {
 
 .product-panel {
 	height: 250px;
+}
+
+.featured-panel {
+
+	height: 600px;
 }
 
 .shop-name-upper {
@@ -469,59 +540,28 @@ a {
 	margin-top: 5px;
 }
 
-
 .shop-nav {
-	background: #252525;
-	border-radius: 15px;
-	color: #ffffff;
-	padding-top: 10px;
-	padding-bottom: 15px;
-	border-left: solid 5px #252525;
+
+	margin-top: 10px;
 }
 
 
+.shop-nav > li {
 
-.shop-link > li > a {
-
-	margin-left: 20px;
-	padding-left: 0px;
-	margin-right: 30px;
-	color: #ffffff;
-	border-bottom: solid 1px #252525;
+	padding: 0;
 }
 
-.sub-shop-link > li > a {
-	color: #ffffff;
-	margin-left: 40px;
-	padding-left: 0px;
-	margin-right: 30px;
-	border-bottom: solid 1px #252525;
+.shop-nav > li > a:hover {
+
+	background: #f5f5f5;
+	color: #252525;
 }
 
-.sub-shop-link > li > a:hover {
-	border-bottom: solid 1px #ffffff;
-}
 
-.shop-link > li > a:hover {
-	border-bottom: solid 1px #ffffff;
-}
-.shop-link > li > a:focus {
-	background: #252525;
-	border-bottom: solid 1px #ffffff;
-}
-
-.shop-dashboard {
-
-	border-bottom: solid 1px #ffffff;
-	margin-left: 20px;
-	margin-right: 20px; 
-	padding-left: 0px;
-}
 
 .app-space {
 
 	margin-top: 10px;
-	margin-bottom: 10px;
 }
 
 .dropdown-share {

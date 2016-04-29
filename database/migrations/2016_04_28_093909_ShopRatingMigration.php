@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ShopMigration extends Migration
+class ShopRatingMigration extends Migration
 {
     /**
      * Run the migrations.
@@ -12,13 +12,14 @@ class ShopMigration extends Migration
      */
     public function up()
     {
-        Schema::create('shops', function (Blueprint $table) {
+        Schema::create('shop_ratings', function (Blueprint $table) {
 
             $table->increments('id');
-            $table->string('shop_name');
-            $table->string('shop_logo');
-            $table->string('region');
+            $table->decimal('rating', 2, 1);
+            $table->integer('shop_id')->unsigned()->unique();
             $table->timestamps();
+            $table->foreign('shop_id')->references('id')->on('shops');
+            
         });
     }
 
@@ -29,6 +30,6 @@ class ShopMigration extends Migration
      */
     public function down()
     {
-        Schema::drop('shops');
+        Schema::drop('shop_ratings');
     }
 }

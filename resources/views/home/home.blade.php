@@ -8,7 +8,6 @@
 		<div class="col-sm-12">
 			<div id="myCarousel" class="carousel slide app-carousel">
 				<div class="carousel-inner app-shop-inner">
-					<?php $a = $b = 1;?>
 					@for($a = 1; $a <= 4; $a++)
 						<div class="item{{$a == 1 ? ' active': ''}}">
 							<div class="row">
@@ -46,27 +45,31 @@
 
 <div class="container" style="margin-top: 20px;">
 	<!--featured-->
-	<div class="row app-featured">
-			<div class="col-sm-8">
-				<!--<h4 style="color: #252525; font-weight: 20px;">FEATURED PRODUCTS</h4>-->
-				<div id="myCarousel" class="carousel slide app-featured-carousel">
+	<div class="row ">
+			<div class="col-sm-8 app-featured">
+				<h4 style="color: #252525; font-weight: 20px;">FEATURED PRODUCTS</h4>
+				<div id="featured" class="carousel slide">
 					<!--<div class="">-->
 						<!--indicator-->
 						<ol class="carousel-indicators">
-							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-							<li data-target="#myCarousel" data-slide-to="1"></li>
-							<li data-target="#myCarousel" data-slide-to="2"></li>
+							@for($i = 1; $i <= 4; $i++)
+								<li data-target="#featured" data-slide-to="{{$i-1}}" class="{{$i == 1 ? ' active': ''}}"></li>
+							@endfor
 						</ol>
 						<div class="carousel-inner">
-							<div class="item active">
-								<img src="photos/reebook.png"  width="100%" height="400">
-							</div>
-							<div class="item">
-								<img src="photos/fashonista.png"  width="100%" height="400">
-							</div>
-							<div class="item">
-								<img src="photos/index.jpeg"  width="100%" height="400">
-							</div>
+								@for($i = 1; $i <= 4; $i++)
+								<div class="item{{$i == 1 ? ' active': ''}}">
+									<div style="height: 550px;">
+										<img src="{{asset('photos/index.jpeg')}}" width="100%" height="100%">
+									</div>
+									<h4 class="text-center">
+										<strong>
+											Samsung Notebook&nbsp;
+											<span class="featured-price">Tsh 750000</span>
+										</strong>
+									</h4>
+								</div>
+								@endfor
 						</div>
 					<!--</div>-->
 				</div>
@@ -98,7 +101,7 @@
 								Earn shopping points for unlimited shopping discount.
 								All you need is to tell a friend to tell a friend 
 							</p>
-							<a href="{{url('/register')}}" class="btn btn-primary btn-lg app-btn">SIGN UP</a>
+							<a href="{{url('/register')}}" class="btn btn-primary btn-lg app-btn signup-btn">SIGN UP</a>
 						</div>
 					</div>
 				</div>
@@ -111,69 +114,40 @@
 		<div class="row app-brand-header">
 			<div class="col-sm-12">
 				<div class="row">
-					<div class="col-sm-5 app-header-line-left"></div>
-					<div class="col-sm-2"><h4 class="text-center">Brands</h4></div>
-					<div class="col-sm-5 app-header-line-right"></div>
+					<div class="col-sm-5">
+						<div class="app-header-line-left"></div>
+					</div>
+					<div class="col-sm-2">
+						<h4 class="text-center">Brand</h4>
+					</div>
+					<div class="col-sm-5">
+						<div class="app-header-line-right"></div>
+					</div>
 				</div>
 			</div>
 			<div class="col-sm-12">
-				<div id="myCarousel" class="carousel slide app-carousel">
+				<div id="brand" class="carousel slide app-carousel">
 					<div class="carousel-inner text-center app-brand-inner">
-						<div class="item active">
-							<div class="row">
-								<div class="col-sm-3">
-									<div class="jumbotron app-brand">									
-										<img src="photos/reebook.png" width=100%>
-										<h4>REEBOOK</h4>
+						@for($a = 1; $a <= 10; $a++)
+								<div class="item{{$a == 1 ? ' active': ''}}">
+									<div class="row">
+										@for($b = 1; $b <= 4; $b++)
+										<div class="col-sm-3">
+											<div class="panel panel-default product-panel">									
+												<div class="panel-body text-center">
+													<img src="{{asset('photos/reebook.png')}}" width=100% height="200">
+													<h5>REEBOOK</h5>
+												</div>
+											</div>
+										</div>
+										@endfor	
 									</div>
 								</div>
-								<div class="col-sm-3">
-									<div class="jumbotron app-brand">									
-										<img src="photos/fashonista.png" width=100%>
-										<h4>FASHONISTA</h4>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="jumbotron app-brand">									
-										<img src="photos/link.png" width=100%>
-										<h4>LINK</h4>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="jumbotron app-brand">									
-										<img src="photos/vans.png" width=100%>
-										<h4>VANS</h4>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="item">
-							<div class="row">
-								<div class="col-sm-4">
-									<div class="jumbotron">									
-										<div class="photos/logo">shop</div>										
-										<button class="btn btn-primary">SHOP</button>
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="jumbotron">										
-										<div class="logo">shop</div>										
-										<button class="btn btn-primary">SHOP</button>
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="jumbotron">
-										<h1>SHOP</h1> 
-										<button class="btn btn-primary">SHOP</button>
-									</div>
-								</div>
-							</div>
-						</div>
+						@endfor
 					</div>
 				<!-- Carousel nav -->
-					<a class="carousel-control left app-carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-					<a class="carousel-control right app-carousel-control" href="#myCarousel"	data-slide="next">&rsaquo;</a>
+					<a class="carousel-control left app-carousel-control" href="#brand" data-slide="prev">&lsaquo;</a>
+					<a class="carousel-control right app-carousel-control" href="#brand"	data-slide="next">&rsaquo;</a>
 				</div>
 			</div>
 		</div>
@@ -184,69 +158,40 @@
 		<div class="row app-brand-header">
 			<div class="col-sm-12">
 				<div class="row">
-					<div class="col-sm-5 app-header-line-left"></div>
-					<div class="col-sm-2"><h4 class="text-center">Electronics</h4></div>
-					<div class="col-sm-5 app-header-line-right"></div>
+					<div class="col-sm-5">
+						<div class="app-header-line-left"></div>
+					</div>
+					<div class="col-sm-2">
+						<h4 class="text-center">Electronics</h4>
+					</div>
+					<div class="col-sm-5">
+						<div class="app-header-line-right"></div>
+					</div>
 				</div>
 			</div>
 			<div class="col-sm-12">
-				<div id="myCarousel" class="carousel slide app-carousel">
+				<div id="electronics" class="carousel slide app-carousel">
 					<div class="carousel-inner text-center app-brand-inner">
-						<div class="item active">
-							<div class="row">
-								<div class="col-sm-3">
-									<div class="jumbotron app-brand">									
-										<img src="photos/reebook.png" width=100%>
-										<h4>REEBOOK</h4>
+						@for($a = 1; $a <= 10; $a++)
+								<div class="item{{$a == 1 ? ' active': ''}}">
+									<div class="row">
+										@for($b = 1; $b <= 4; $b++)
+										<div class="col-sm-3">
+											<div class="panel panel-default product-panel">									
+												<div class="panel-body text-center">
+													<img src="{{asset('photos/reebook.png')}}" width=100% height="200">
+													<h5>REEBOOK</h5>
+												</div>
+											</div>
+										</div>
+										@endfor	
 									</div>
 								</div>
-								<div class="col-sm-3">
-									<div class="jumbotron app-brand">									
-										<img src="photos/fashonista.png" width=100%>
-										<h4>FASHONISTA</h4>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="jumbotron app-brand">									
-										<img src="photos/link.png" width=100%>
-										<h4>LINK</h4>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="jumbotron app-brand">									
-										<img src="photos/vans.png" width=100%>
-										<h4>VANS</h4>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="item">
-							<div class="row">
-								<div class="col-sm-4">
-									<div class="jumbotron">									
-										<div class="photos/logo">shop</div>										
-										<button class="btn btn-primary">SHOP</button>
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="jumbotron">										
-										<div class="logo">shop</div>										
-										<button class="btn btn-primary">SHOP</button>
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="jumbotron">
-										<h1>SHOP</h1> 
-										<button class="btn btn-primary">SHOP</button>
-									</div>
-								</div>
-							</div>
-						</div>
+						@endfor
 					</div>
 				<!-- Carousel nav -->
-					<a class="carousel-control left app-carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-					<a class="carousel-control right app-carousel-control" href="#myCarousel"	data-slide="next">&rsaquo;</a>
+					<a class="carousel-control left app-carousel-control" href="#electronics" data-slide="prev">&lsaquo;</a>
+					<a class="carousel-control right app-carousel-control" href="#electronics"	data-slide="next">&rsaquo;</a>
 				</div>
 			</div>
 		</div>
@@ -257,69 +202,40 @@
 		<div class="row app-brand-header">
 			<div class="col-sm-12">
 				<div class="row">
-					<div class="col-sm-5 app-header-line-left"></div>
-					<div class="col-sm-2"><h4 class="text-center">Jewerelly</h4></div>
-					<div class="col-sm-5 app-header-line-right"></div>
+					<div class="col-sm-5">
+						<div class="app-header-line-left"></div>
+					</div>
+					<div class="col-sm-2">
+						<h4 class="text-center">Jewerelly</h4>
+					</div>
+					<div class="col-sm-5">
+						<div class="app-header-line-right"></div>
+					</div>
 				</div>
 			</div>
 			<div class="col-sm-12">
-				<div id="myCarousel" class="carousel slide app-carousel">
+				<div id="jewerelly" class="carousel slide app-carousel">
 					<div class="carousel-inner text-center app-brand-inner">
-						<div class="item active">
-							<div class="row">
-								<div class="col-sm-3">
-									<div class="jumbotron app-brand">									
-										<img src="photos/reebook.png" width=100%>
-										<h4>REEBOOK</h4>
+						@for($a = 1; $a <= 10; $a++)
+								<div class="item{{$a == 1 ? ' active': ''}}">
+									<div class="row">
+										@for($b = 1; $b <= 4; $b++)
+										<div class="col-sm-3">
+											<div class="panel panel-default product-panel">									
+												<div class="panel-body text-center">
+													<img src="{{asset('photos/reebook.png')}}" width=100% height="200">
+													<h5>REEBOOK</h5>
+												</div>
+											</div>
+										</div>
+										@endfor	
 									</div>
 								</div>
-								<div class="col-sm-3">
-									<div class="jumbotron app-brand">									
-										<img src="photos/fashonista.png" width=100%>
-										<h4>FASHONISTA</h4>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="jumbotron app-brand">									
-										<img src="photos/link.png" width=100%>
-										<h4>LINK</h4>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="jumbotron app-brand">									
-										<img src="photos/vans.png" width=100%>
-										<h4>VANS</h4>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="item">
-							<div class="row">
-								<div class="col-sm-4">
-									<div class="jumbotron">									
-										<div class="photos/logo">shop</div>										
-										<button class="btn btn-primary">SHOP</button>
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="jumbotron">										
-										<div class="logo">shop</div>										
-										<button class="btn btn-primary">SHOP</button>
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="jumbotron">
-										<h1>SHOP</h1> 
-										<button class="btn btn-primary">SHOP</button>
-									</div>
-								</div>
-							</div>
-						</div>
+						@endfor
 					</div>
 				<!-- Carousel nav -->
-					<a class="carousel-control left app-carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-					<a class="carousel-control right app-carousel-control" href="#myCarousel"	data-slide="next">&rsaquo;</a>
+					<a class="carousel-control left app-carousel-control" href="#jewerelly" data-slide="prev">&lsaquo;</a>
+					<a class="carousel-control right app-carousel-control" href="#jewerelly"	data-slide="next">&rsaquo;</a>
 				</div>
 			</div>
 		</div>
