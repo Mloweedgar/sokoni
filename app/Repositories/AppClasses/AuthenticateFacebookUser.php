@@ -13,6 +13,7 @@ class AuthenticateFacebookUser {
 	private $auth;
 
 	public function  __construct(UserRepository $users, Socialite $socialite, Auth $auth) {
+		
 		$this->users = $users;
 		$this->socialite = $socialite;
 		$this->auth = $auth;

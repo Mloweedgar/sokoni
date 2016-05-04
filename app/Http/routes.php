@@ -20,9 +20,7 @@ Route::get('/facebookLogin', 'Auth\FacebookAuthController@facebookLogin');
 
 Route::get('/shop/{id}', 'Shop\ShopController@getShop');
 
-Route::get('shop', function() {
-	return view('shopv2');
-});
+Route::get('/shop/reviews/{id}', 'Shop\ShopReviewController@getReview');
 
 
 //for emails
@@ -37,7 +35,7 @@ Route::get('sendemail', function () {
         $message->from('mloweedgar0@gmail.com', 'Sokoni project!');
         
         	//here you can write the email of the recipient.
-        $message->to('nobbyand1@gmail.com')->subject('Whats up Welcome to sokoni site');
+        $message->to('rajeyw@gmail.com')->subject('Whats up Welcome to sokoni site');
 
     });
 

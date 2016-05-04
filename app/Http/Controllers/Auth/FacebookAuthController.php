@@ -19,6 +19,7 @@ class FacebookAuthController extends Controller
     }
 
     public function userHasLoggedIn($user) {
+    	
         return redirect('/');
     }
 }

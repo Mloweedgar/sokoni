@@ -1,7 +1,7 @@
 <div class="row">
 			<div class="col-sm-2 center-block">
 				<div class="text-center shop-logo">
-					<i class="fa fa-bicycle fa-5x" aria-hidden="true"></i>
+					<a href="{{url('/shop/'.$shop->id)}}"><i class="fa fa-bicycle fa-5x" aria-hidden="true"></i></a>
 				</div>
 			</div>
 			<div class="col-sm-10">
@@ -56,10 +56,10 @@
 					<div class="col-sm-9">
 						<ul class="list-inline pull-right">
 							<li class="shop-rating">
-								@include('shop.shop_rating')
+								{{rating($shop->rating)}}
 							</li>
 							<li class="shop-review">
-								<a href="#">
+								<a href="{{url('/shop/reviews/'.$shop->id)}}">
 									<span class="badge">22</span>
 									reviews
 								</a>

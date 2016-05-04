@@ -11,7 +11,6 @@ class ShopSeeder extends Seeder
      */
     public function run()
     {
-        $i = 1;
 
         for($i = 1; $i <= 16; $i++) {
 

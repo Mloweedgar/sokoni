@@ -1,8 +1,6 @@
 body {
     font-family: 'Quicksand', sans-serif;
     background: #DDDDDD;
-    margin-left: 70px;
-	margin-right: 70px;
 }
 
 
@@ -17,9 +15,11 @@ body {
 
 #app-layout {
 	background: #ffffff;
-	border-left: solid 1px #f5f5f5; 
-	border-right: solid 1px #f5f5f5;
+	border-left: solid 1px #ddd; 
+	border-right: solid 1px #ddd;
 	color: #252525;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
 .app-header {
@@ -576,10 +576,43 @@ a {
 	text-align: center;
 }
 
+.app-review-header {
 
- 
+	border-bottom: solid 1px #ddd;
+	padding-bottom: 10px;
+}
 
+.app-review-body {
 
+	padding: 20px;
+	height: 200px;
+	border-radius: 5px;
+	border: solid 1px #f5f5f5;
+	position: relative;
+	background: #f5f5f5;
+}
+
+.app-review-body:before {
+
+	content: '';
+	position: absolute;
+	top: 198px;
+	left: 30px;
+	height: 0;
+	width: 0;
+	border: 10px solid;
+	border-color: #f5f5f5 transparent transparent #f5f5f5;
+	
+} 
+
+.app-thumbnail {
+
+	border: solid 1px #ddd;
+	height: auto;
+	display: inline-block;
+	padding: 3px;
+	border-radius: 50px;
+}
 
 .fa-btn {
     margin-right: 6px;
