@@ -16,10 +16,7 @@ class ShopRepository {
 
 	public function oneShop($id) {
 
-		return DB::table('shops')->join('shop_ratings', 'shops.id', '=', 'shop_ratings.shop_id')
-								 ->select('shops.id', 'shops.shop_name', 'shops.region', 'shop_ratings.rating')
-								 ->where('shops.id', $id)
-								 ->first();
+		return Shop::find($id);
 	}
 
 	public function allReviewsPerShop($id) {

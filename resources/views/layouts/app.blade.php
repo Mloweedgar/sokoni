@@ -2,7 +2,6 @@
 <body>
     <div id="app-layout">
         @include('includes.layouts.navigation')
-        @include('includes.layouts.search')
         @yield('content')
         @include('includes.layouts.footer')
     </div>

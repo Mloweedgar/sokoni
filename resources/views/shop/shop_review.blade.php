@@ -5,7 +5,7 @@
 
 		<div class="row">
 			<div class="col-sm-12">
-				<h3 class="page-header app-page-header text-center">Reviews</h3>
+				<h3 class="page-header app-page-header text-center"><strong>Reviews</strong></h3>
 			</div>
 		</div>
 

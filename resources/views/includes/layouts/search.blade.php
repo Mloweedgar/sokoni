@@ -13,24 +13,6 @@
 						<a href="#" data-toggle="dropdown" role="button">
 							Category {{$j}}
 						</a>
-
-						<ul class="dropdown-menu subcategory-menu" role="menu">
-                            
-                            <div class="row">
-                            	@for($a = 1; $a <= 4; $a++)
-                            	<div class="col-sm-3">
-                            		<h4>subCategory</h4>
-                            		<ul class="nav nav-stacked">
-                            			<li><a href="#">brand1</a></li>
-                            			<li><a href="#">brand1</a></li>
-                            			<li><a href="#">brand1</a></li>
-                            			<li><a href="#">brand1</a></li>
-                            		</ul>
-                            	</div>
-                            	@endfor
-                            </div>
-                            
-                        </ul>
 					</li>
 					@endfor
 				</ul>

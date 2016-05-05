@@ -56,11 +56,11 @@
 					<div class="col-sm-9">
 						<ul class="list-inline pull-right">
 							<li class="shop-rating">
-								{{rating($shop->rating)}}
+								{{rating($shop->averageRating)}}
 							</li>
 							<li class="shop-review">
 								<a href="{{url('/shop/reviews/'.$shop->id)}}">
-									<span class="badge">22</span>
+									<span class="badge">{{$shop->reviewCount}}</span>
 									reviews
 								</a>
 							</li>

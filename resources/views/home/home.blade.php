@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@include('includes.layouts.search')
 
 <!-- featured shop-->
 <div class="container" style="margin-top: 40px;">

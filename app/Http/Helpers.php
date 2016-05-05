@@ -66,13 +66,21 @@
 		<i class="fa fa-star-o" aria-hidden="true"></i>&nbsp;
 		<i class="fa fa-star-o" aria-hidden="true"></i>';
 
-	} elseif($rating >= 1 && $rating <= 1.2) {
+	} elseif($rating >= 0.8 && $rating <= 1.2) {
 
 	echo '<i class="fa fa-star" aria-hidden="true"></i>&nbsp;
 		<i class="fa fa-star-o" aria-hidden="true"></i>&nbsp;
 		<i class="fa fa-star-o" aria-hidden="true"></i>&nbsp;
 		<i class="fa fa-star-o" aria-hidden="true"></i>&nbsp;
 		<i class="fa fa-star-o" aria-hidden="true"></i>';
+
+	} elseif($rating >= 0.5 && $rating <= 0.7) {
+
+		echo '<i class="fa fa-star-half-o" aria-hidden="true"></i>&nbsp;
+			<i class="fa fa-star-o" aria-hidden="true"></i>&nbsp;
+			<i class="fa fa-star-o" aria-hidden="true"></i>&nbsp;
+			<i class="fa fa-star-o" aria-hidden="true"></i>&nbsp;
+			<i class="fa fa-star-o" aria-hidden="true"></i>';
 
 	}
 
