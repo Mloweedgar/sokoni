@@ -136,7 +136,9 @@
 										<div class="col-sm-3">
 											<div class="panel panel-default product-panel">									
 												<div class="panel-body text-center">
+												<a  href="{{url('/product')}}">
 													<img src="{{asset('photos/reebook.png')}}" width=100% height="200">
+												</a>
 													<h5>REEBOOK</h5>
 												</div>
 											</div>
