@@ -21,9 +21,15 @@
 									<div class="row">
 										@for($b = 1; $b <= 3; $b++)
 										<div class="col-sm-4">
-											<div class="panel panel-default product-panel">									
+											<div class="panel panel-default product-panel">
+
+
 												<div class="panel-body text-center">
+												<!-- this is a link to the product -->
+												<a  href="{{url('/product')}}" class="btn btn-primary shop-link-btn">
 													<img src="{{asset('photos/reebook.png')}}" width=100% height="200">
+												</a>
+													
 													<h5>REEBOOK</h5>
 												</div>
 											</div>
