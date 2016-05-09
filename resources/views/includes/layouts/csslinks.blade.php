@@ -5,6 +5,7 @@
 <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
 <!--<link rel="stylesheet" type="text/css" href="css/custom.css">-->
 <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
+<link rel="stylesheet" type="text/css" href="css/product.css">
 <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
 
 
