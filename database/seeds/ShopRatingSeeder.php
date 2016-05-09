@@ -14,7 +14,7 @@ class ShopRatingSeeder extends Seeder
         DB::table('shop_ratings')->insert([
         	'rating' => 4.5,
         	'shop_id' => 1,
-        	'user_id' => 6,
+        	'user_id' => 1,
         	'rating_status' => 1,
 
         	]);

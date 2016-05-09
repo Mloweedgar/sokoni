@@ -8,7 +8,7 @@
 				<h4>All Categories</h4>
 			</div>
 			<div class="col-sm-3">
-				<input type="text" name="item" placeholder="FILTER PRODUCT" class="form-control" />				
+				<input type="text" name="item" placeholder="FILTER PRODUCT" class="form-control" />
 			</div>
 		</div>
 
@@ -17,7 +17,7 @@
 				<div style="border-bottom: solid 1px #ddd;"></div>
 			</div>
 		</div>
-		
+
 		<div class="row" style="margin-top: 10px;">
 			@include('shop.shop_sidebar')
 			@include('shop.shop_content')

@@ -1,15 +1,13 @@
 body {
     font-family: 'Quicksand', sans-serif;
     background: #DDDDDD;
-    margin-left: 5%;
-	margin-right: 5%;
 }
 
 
 .app-nav {
 	border-bottom: solid 1px #252525;
 	border-radius: 0px;
-	font-size: 17px; 
+	font-size: 17px;
 }
 .app-nav a {
 	color: #252525;
@@ -17,15 +15,17 @@ body {
 
 #app-layout {
 	background: #ffffff;
-	border-left: solid 1px #ddd; 
+	border-left: solid 1px #ddd;
 	border-right: solid 1px #ddd;
 	color: #252525;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 .app-header {
 	border-bottom: solid 1px #DDDDDD;
 	border-radius: 0px;
-	font-size: 17px; 
+	font-size: 17px;
 	margin-top: 20px;
 }
 
@@ -83,13 +83,13 @@ body {
 }
 
 .app-header-line-left {
-	border-bottom: solid 1px #ddd; 
-	margin-top: 20px; 
+	border-bottom: solid 1px #ddd;
+	margin-top: 20px;
 }
 
 .app-header-line-right {
-	border-bottom: solid 1px #ddd; 
-	margin-top: 20px; 
+	border-bottom: solid 1px #ddd;
+	margin-top: 20px;
 }
 
 .app-carousel {
@@ -106,7 +106,7 @@ body {
 	width: auto;
 	height: 30px;
 	padding-right: 10px;
-	padding-left: 10px; 
+	padding-left: 10px;
 	line-height: normal;
 	position: absolute;
 	top: 45%;
@@ -312,7 +312,7 @@ a {
  	font-size: 12px;
  }
 
- 
+
 
  .outer-layer {
  	height: 300px;
@@ -336,7 +336,7 @@ a {
   	border-bottom-left-radius: 5px;
   	border-left-style: solid;
   	border-right-style: solid;
-  	
+
 
  }
 
@@ -345,7 +345,7 @@ a {
   	top: 0%;
   	left: 24.4%;
   	border-right-style: solid;
-  	
+
   }
 
 #layer3 {
@@ -502,7 +502,7 @@ a {
 	border: solid 1px #ddd;
 }
 
-.shop-link-btn, 
+.shop-link-btn,
 .shop-link-btn:hover,
 .shop-link-btn:focus {
 
@@ -511,7 +511,7 @@ a {
 }
 
 .shop-panel:hover .shop-slider-link{
-	
+
 	display: block;
 }
 
@@ -606,8 +606,8 @@ a {
 	width: 0;
 	border: 10px solid;
 	border-color: #f5f5f5 transparent transparent #f5f5f5;
-	
-} 
+
+}
 
 .app-thumbnail {
 
