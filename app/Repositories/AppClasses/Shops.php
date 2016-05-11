@@ -35,13 +35,18 @@ class Shops {
 
 			$shop_array[$i][$j]['id'] = $value->id;
 			$shop_array[$i][$j]['shop_name'] = $value->shop_name;
-			
+
 
 			$j++;
 
-				
+
 		}
-		
+
 		return $shop_array;
+	}
+
+	public function getShopCategories($id) {
+
+		return $this->shop->getCategoriesByShop($id);
 	}
 }

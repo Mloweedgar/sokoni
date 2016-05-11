@@ -115,7 +115,7 @@ body {
 	background-image: none;
 }
 
-.app-brand-inner, .app-shop-inner {
+.app-brand-inner, .app-product-inner, .app-shop-inner {
 	padding-left: 40px;
 	padding-right: 40px;
 }
@@ -151,6 +151,34 @@ body {
 	border-radius: 20px;
 	padding-top: 60px;
 	margin-top: 10px;
+}
+
+.shop-tabs {
+  border-bottom: none;
+  border-right: 1px solid #ddd;
+  padding-top: 2px;
+}
+
+.shop-tabs>li {
+  float: none;
+  margin-bottom: 2px;
+}
+
+.shop-tabs >li {
+  margin-right: -1px;
+}
+
+.shop-tabs > li.active > a,
+.shop-tabs > li.active > a:hover,
+.shop-tabs > li.active > a:focus {
+  border-bottom-color: #ddd;
+  border-right-color: transparent;
+}
+
+.shop-tabs > li > a {
+  border-radius: 4px 0 0 4px;
+  margin-right: 0;
+  display:block;
 }
 
 .shop-logo {
@@ -616,6 +644,57 @@ a {
 	display: inline-block;
 	padding: 3px;
 	border-radius: 50px;
+}
+
+.img-indicator > li {
+	width: 50px;
+	height: 50px;
+	padding: 4px 2px 2px 2px;
+	border: solid 1px #f5f5f5;
+  cursor: pointer;
+  background: #ffffff;
+}
+
+.img-indicator > li:hover {
+	border-color: #ddd;
+}
+
+.img-indicator  {
+  margin-left: 20px;
+  position: relative;
+  text-align: center;
+  list-style: none;
+
+}
+
+.pic:hover {
+	transform:scale(1.8);
+	z-index: 900;
+	vertical-align: center;
+}
+
+.app-tabs {
+  margin-top: 20px;
+	border-color: #ddd;
+}
+
+.app-tabs > li.active > a,
+.app-tabs > li.active > a:hover,
+.app-tabs > li.active > a:focus {
+  color: #ffffff;
+  background-color: #252525;
+  border: 1px solid #252525;
+}
+
+.app-tab-content {
+	padding-top: 20px;
+	border-top-color: transparent;
+}
+
+.app-product-shop {
+	border: solid 1px #ddd;
+	border-radius: 5px;
+	padding-top: 10px;
 }
 
 .fa-btn {

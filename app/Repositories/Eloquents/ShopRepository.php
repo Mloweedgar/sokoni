@@ -28,4 +28,9 @@ class ShopRepository {
 
 		return Shop::find($id)->shopRatings()->get();
 	}
+
+	public function getCategoriesByShop($id) {
+
+		return Shop::find($id)->category()->get();
+	}
 }

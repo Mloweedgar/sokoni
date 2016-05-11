@@ -19,10 +19,7 @@ Route::get('/facebookLogin', 'Auth\FacebookAuthController@facebookLogin');
 
 
 Route::get('/shop/{id}', 'Shop\ShopController@getShop');
-Route::get('/product',function(){
-
-    return view('product.index');
-});
+Route::get('/product', 'Product\ProductController@index');
 
 Route::get('/shop/reviews/{id}', 'Shop\ShopReviewController@getReview');
 
@@ -37,7 +34,7 @@ Route::get('sendemail', function () {
     Mail::send('emails.welcome', $data, function ($message) {
 
         $message->from('mloweedgar0@gmail.com', 'Sokoni project!');
-        
+
         	//here you can write the email of the recipient.
         $message->to('rajeyw@gmail.com')->subject('Whats up Welcome to sokoni site');
 
@@ -46,4 +43,3 @@ Route::get('sendemail', function () {
     return "Your email has been sent successfully";
 
 });
-

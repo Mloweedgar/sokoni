@@ -66,5 +66,15 @@ class Shop extends Model
     	return ($related) ? (int) $related->average_rating : 0.5;
     }
 
+    public function product() {
+
+      return $this->hasMany('App\Models\Product');
+    }
+
+    public function category() {
+
+      return $this->belongsToMany('App\Models\Category', 'shop_product_categories');
+    }
+
 
 }
