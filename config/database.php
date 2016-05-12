@@ -71,7 +71,7 @@ return [
             'host'     => 'ec2-23-21-66-88.compute-1.amazonaws.com',
             'database' => 'demqakpkao390m',
             'username' => 'zwnttohtwxsmvk',
-            'port' => 5432
+            'port' => 5432,
             'password' => 'vr0SISHWHzDfvnE983MFOnDoE8',
             'charset' => 'utf8',
             'prefix' => '',
