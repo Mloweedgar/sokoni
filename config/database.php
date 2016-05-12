@@ -72,7 +72,6 @@ return [
             'database' => substr(parse_url(getenv("DATABASE_URL"))["path"], 1),
             'username' => parse_url(getenv("DATABASE_URL"))["user"],
             'password' => parse_url(getenv("DATABASE_URL"))["pass"],
-            'port' => parse_url(getenv("DATABASE_URL"))["port"],
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
