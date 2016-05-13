@@ -15,6 +15,8 @@ class ProductSeeder extends Seeder
         1 => [
           'name' => 'Shirt',
           'image_link_1' => 'photos/reebook.png',
+          'image_link_2' => 'photos/reebook.png',
+          'image_link_3' => 'photos/reebook.png',
           'shop_id' => 1,
           'brand_id' => 1
         ],
@@ -22,6 +24,8 @@ class ProductSeeder extends Seeder
         2 => [
           'name' => 'Sneaker',
           'image_link_1' => 'photos/link.png',
+          'image_link_2' => 'photos/reebook.png',
+          'image_link_3' => 'photos/reebook.png',
           'shop_id' => 1,
           'brand_id' => 1
         ],
@@ -29,6 +33,8 @@ class ProductSeeder extends Seeder
         3 => [
           'name' => 'High Hills',
           'image_link_1' => 'fashonista.png',
+          'image_link_2' => 'photos/reebook.png',
+          'image_link_3' => 'photos/reebook.png',
           'shop_id' => 1,
           'brand_id' => 1
         ],
@@ -36,6 +42,8 @@ class ProductSeeder extends Seeder
         4 => [
           'name' => 'Tshirt',
           'image_link_1' => 'photos/reebook.png',
+          'image_link_2' => 'photos/reebook.png',
+          'image_link_3' => 'photos/reebook.png',
           'shop_id' => 1,
           'brand_id' => 1
         ],
