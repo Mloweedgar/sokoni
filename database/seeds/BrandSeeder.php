@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 
+use App\Models\Brand;
+
 class BrandSeeder extends Seeder
 {
     /**
@@ -24,7 +26,7 @@ class BrandSeeder extends Seeder
       ];
 
       foreach ($brand as $value) {
-        DB::table('brands')->insert($value);
+        Brand::firstOrCreate($value);
       }
     }
 }

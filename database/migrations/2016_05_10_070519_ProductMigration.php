@@ -18,9 +18,9 @@ class ProductMigration extends Migration
             $table->string('image_link_1');
             $table->string('image_link_2');
             $table->string('image_link_3');
-            $table->text('description');
-            $table->decimal('discount_factor');
-            $table->integer('quantity_stocked');
+            $table->text('description')->nullable();
+            $table->decimal('discount_factor')->nullable();
+            $table->integer('quantity_stocked')->nullable();
             $table->integer('shop_id')->unsigned();
             $table->integer('brand_id')->unsigned();
             $table->foreign('shop_id')->references('id')->on('shops');

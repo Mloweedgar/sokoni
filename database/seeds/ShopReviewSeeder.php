@@ -20,7 +20,9 @@ class ShopReviewSeeder extends Seeder
         		'user_id' => 1,
         		'shop_id' => 1,
         		'review' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,',
-                'written_on' => Carbon::now()
+            'written_on' => Carbon::now(),
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
         		]);
         }
     }

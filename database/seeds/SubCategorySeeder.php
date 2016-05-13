@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 
+use App\Models\SubCategory;
+
 class SubCategorySeeder extends Seeder
 {
     /**
@@ -24,7 +26,7 @@ class SubCategorySeeder extends Seeder
       ];
 
       foreach ($sub_category as $value) {
-        DB::table('sub_categories')->insert($value);
+        SubCategory::firstOrCreate($value);
       }
     }
 }

@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 
+use App\Models\Product;
+
 class ProductSeeder extends Seeder
 {
     /**
@@ -50,7 +52,7 @@ class ProductSeeder extends Seeder
 
       ];
       foreach ($user as $value) {
-        DB::table('products')->insert($value);
+        Product::firstOrCreate($value);
       }
     }
 }

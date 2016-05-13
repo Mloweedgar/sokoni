@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 
+use App\Models\ShopRating;
+
 class ShopRatingSeeder extends Seeder
 {
     /**
@@ -11,12 +13,14 @@ class ShopRatingSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('shop_ratings')->insert([
+        $value = [
         	'rating' => 4.5,
         	'shop_id' => 1,
         	'user_id' => 1,
         	'rating_status' => 1,
 
-        	]);
+        	];
+
+          ShopRating::firstOrCreate($value);
     }
 }
