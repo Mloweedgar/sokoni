@@ -17,7 +17,7 @@ class ProductMigration extends Migration
             $table->string('name');
             $table->string('image_link_1');
             $table->string('image_link_2');
-            $table->string('images_link_3');
+            $table->string('image_link_3');
             $table->text('description');
             $table->decimal('discount_factor');
             $table->integer('quantity_stocked');
