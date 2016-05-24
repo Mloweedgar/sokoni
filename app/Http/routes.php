@@ -13,6 +13,19 @@
 
 Route::get('/', 'HomeController@index');
 
+// this is for profile
+Route::get('/profile', function () {
+    return view('user.index');
+});;
+
+Route::get('/wishlist',function(){
+    return view('user.wishlist');
+});
+
+Route::get('/profile/shopping_buddy',function(){
+    return view('user.shopping_buddy');
+});
+
 Route::auth();
 
 Route::get('/facebookLogin', 'Auth\FacebookAuthController@facebookLogin');
