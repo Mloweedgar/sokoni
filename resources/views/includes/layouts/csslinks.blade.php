@@ -9,6 +9,7 @@
 <link rel="stylesheet" type="text/css" href="css/Shopping_cart.css">
 <link rel="stylesheet" type="text/css" href="css/solution.css">
 <link rel="stylesheet" type="text/css" href="css/wishlist.css">
+<link rel="stylesheet" type="text/css" href="css/shopping_buddy.css">
 
 <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
 

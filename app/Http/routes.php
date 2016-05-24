@@ -22,7 +22,11 @@ Route::get('/wishlist',function(){
     return view('user.wishlist');
 });
 
-Route::get('/profile/shopping_buddy',function(){
+Route::get('/orders',function(){
+    return view('user.order');
+});
+
+Route::get('/shopping_buddy',function(){
     return view('user.shopping_buddy');
 });
 
