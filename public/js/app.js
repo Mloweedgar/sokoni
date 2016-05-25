@@ -1,4 +1,10 @@
 $(document).ready(function() {
+		//$.material.init()
+		// Instantiate a slider
+		//$("#ex2").slider({});
+		var slider = new Slider('#ex2', {});
+
+
 		$('.layer').mouseenter(function() {
 
 			var id = $(this).attr('id');
@@ -53,7 +59,7 @@ $(document).ready(function() {
 				$(layer_id).animate({left: "66.6%", width: "31%"});
 
 			}
-			
+
 		});
 
 

@@ -23,6 +23,15 @@ class BrandSeeder extends Seeder
           'name' => 'manga',
           'sub_category_id' => 1,
         ],
+
+        3 => [
+          'name' => 'hot basic',
+          'sub_category_id' => 1,
+        ],
+        4 => [
+          'name' => 'dickies',
+          'sub_category_id' => 1,
+        ],
       ];
 
       foreach ($brand as $value) {

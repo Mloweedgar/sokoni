@@ -43,3 +43,12 @@ Route::get('sendemail', function () {
     return "Your email has been sent successfully";
 
 });
+
+Route::get('/alert/{alertType}/{message}', function($alertType, $message) {
+
+  return alert($alertType, $message);
+});
+
+Route::get('/rate-product', function() {
+  return view('product.rate-product');
+});

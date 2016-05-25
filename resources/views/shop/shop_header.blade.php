@@ -47,11 +47,11 @@
 						<div style="border-bottom: solid 1px #ddd;"></div>
 					</div>
 				</div>
-				
+
 				<div class="row" style="margin-top: 10px;">
 					<div class="col-sm-3" style="">
 						<div style="margin-bottom: 20px;">{{$shop->region}}, Tanzania</div>
-						
+
 					</div>
 					<div class="col-sm-9">
 						<ul class="list-inline pull-right">

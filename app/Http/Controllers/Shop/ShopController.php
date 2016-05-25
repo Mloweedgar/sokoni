@@ -26,6 +26,7 @@ class ShopController extends Controller
     public function getShop($id) {
 
     	$shop = $this->shop->getOne($id);
+
 			$category_list = $this->shop->getShopCategories($id);
 
     	return view('shop.get_shop')->with([

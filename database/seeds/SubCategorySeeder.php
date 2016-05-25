@@ -23,6 +23,14 @@ class SubCategorySeeder extends Seeder
           'sub_category_name' => 'Shirt',
           'category_id' => 1,
         ],
+        3 => [
+          'sub_category_name' => 'Trouser',
+          'category_id' => 1,
+        ],
+        4 => [
+          'sub_category_name' => 'Skirt',
+          'category_id' => 1,
+        ],
       ];
 
       foreach ($sub_category as $value) {

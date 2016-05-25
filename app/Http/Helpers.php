@@ -110,3 +110,21 @@
          &rsaquo;
          </a>';
  }
+
+function alert($alertType, $message) {
+
+  echo '<div class="alert alert-'.$alertType. '">
+          <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>';
+
+  if($alertType == 'success') {
+    echo '<strong><i class="fa fa-check-circle" aria-hidden="true"></i>&nbsp;</strong>';
+
+  } elseif($alertType == 'info') {
+    echo '<strong><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;</strong>';
+
+  } elseif ($alertType == 'warning') {
+    echo '<strong><i class="fa fa-exclamation-circle" aria-hidden="true"></i>&nbsp;</strong>';
+  }
+
+  echo $message.'</div>';
+}
