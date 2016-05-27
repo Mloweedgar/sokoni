@@ -38,7 +38,7 @@
                 <div class="col-sm-12 text-center">
                   <h3>Product long Name</h3><br>
                   <button type="button" class="btn btn-primary btn-lg app-btn">
-                    Buy No
+                    Buy Now
                   </button>
                 </div>
               </div>

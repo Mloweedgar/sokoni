@@ -795,7 +795,8 @@ pic:hover {
   overflow-y: scroll;
 }
 
-.shop-categories {
+.shop-categories,
+.shop-brands {
 
   height: 150px;
   overflow-y: scroll;
