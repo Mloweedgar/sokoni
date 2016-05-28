@@ -1,0 +1,20 @@
+{
+  "name": "sokoni",
+  "description": "",
+  "main": "",
+  "authors": [
+    "rajey <rajeyw@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Mloweedgar/sokoni",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-ui": "^1.11.4"
+  }
+}

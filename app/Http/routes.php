@@ -30,6 +30,10 @@ Route::get('/shopping_buddy',function(){
     return view('user.shopping_buddy');
 });
 
+Route::get('/shopping-cart', function() {
+  return view('user.shopping-cart');
+});
+
 Route::auth();
 
 Route::get('/facebookLogin', 'Auth\FacebookAuthController@facebookLogin');
