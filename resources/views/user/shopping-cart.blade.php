@@ -37,7 +37,7 @@
               <td class="text-center"><strong id="price-{{$i}}">100000</strong></td>
               <td class="text-center"><strong id="sub-total-{{$i}}">300000</strong></td>
               <td>
-                <a href="#" id="inc-cart-item-{{$i}}" class="inc-item btn btn-default btn-xs"><i class="fa fa-plus"></i></a>
+                <a href="#" class="inc-item btn btn-default btn-xs"><i class="fa fa-plus"></i></a>
                 <a href="#" id="dec-cart-item-{{$i}}" class="dec-item btn btn-default btn-xs"><i class="fa fa-minus"></i></a>
                 <a href="#" id="del-cart-item-{{$i}}" class="del-item btn btn-default btn-xs"><i class="fa fa-trash-o"></i></a>
               </td>

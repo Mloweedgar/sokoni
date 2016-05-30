@@ -7,3 +7,5 @@
 <script type="text/javascript" src="{{asset('js/wishlist.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/shopping-cart.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/autocomplete.js')}}"></script>
+<script type="text/javascript" src="{{asset('bootstrap-material-design/dist/js/material.min.js')}}"></script>
+<!--<script type="text/javascript" src="{{asset('bootstrap-material-design/dist/js/ripples.min.js')}}"></script>-->

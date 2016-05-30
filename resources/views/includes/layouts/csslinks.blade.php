@@ -11,6 +11,8 @@
 <link rel="stylesheet" type="text/css" href="css/shopping_buddy.css">
 <link rel="stylesheet" href="{{asset('css/autocomplete.css')}}">
 <link rel="stylesheet" href="{{asset('jquery-ui/themes/smoothness/jquery-ui.min.css')}}">
-
+<!--
+<link rel="stylesheet" type="text/css" href="{{asset('bootstrap-material-design/dist/css/bootstrap-material-design.min.css')}}">
+-->
 
 <!--<link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>-->

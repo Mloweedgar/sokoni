@@ -4,8 +4,10 @@ $(document).ready(function() {
     /*
      * cacheDOM
      */
-    var $inc_button = $('.inc-item');
-    var $dec_button = '.dec-item';
+    var $inc_class = 'inc-item';
+    var $dec_class = 'dec-item';
+    var $inc_button = $('.' + $inc_class);
+    var $dec_button = $('.' + $dec_class);
     var $del_button = '.del-item';
     var $quantity = '#quantity-';
     var $price = '#price-';
@@ -18,13 +20,14 @@ $(document).ready(function() {
     /*
      * bindEvents
      */
-    $inc_button.on('click', incrementCartItem);
+    $inc_button.on('click', updateCartItem);
+    $dec_button.on('click', updateCartItem);
 
     function render($id, $quantity) {
       $id.empty().append($quantity);
     }
 
-    function incrementCartItem() {
+    function updateCartItem() {
       //get item id
       var $id = getItemId($(this));
       var $sub_total_id = $($sub_total + $id);
@@ -44,7 +47,18 @@ $(document).ready(function() {
       var $original_total = getItemValue($total_id);
 
       //increment quantity
-      $item_quantity++;
+      if($(this).hasClass($inc_class)) {
+        if($item_quantity < 20) {
+          $item_quantity++;
+        }
+
+      } else if($(this).hasClass($dec_class)) {
+        if($item_quantity > 1) {
+          $item_quantity--;
+        }
+
+      }
+
 
       //Compute for sub total
       var $_sub_total = computeSubTotal($item_quantity, $item_price);

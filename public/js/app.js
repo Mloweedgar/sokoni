@@ -1,4 +1,5 @@
-$(document).ready(function() {
+$(document).ready(function() {\
+	//$.material.init();
 		$('.layer').mouseenter(function() {
 
 			var id = $(this).attr('id');
@@ -53,7 +54,7 @@ $(document).ready(function() {
 				$(layer_id).animate({left: "66.6%", width: "31%"});
 
 			}
-			
+
 		});
 
 
