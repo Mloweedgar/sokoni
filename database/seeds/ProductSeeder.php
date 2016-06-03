@@ -28,7 +28,7 @@ class ProductSeeder extends Seeder
           'image_link_1' => 'photos/link.png',
           'image_link_2' => 'photos/reebook.png',
           'image_link_3' => 'photos/reebook.png',
-          'shop_id' => 1,
+          'shop_id' => 2,
           'brand_id' => 1
         ],
 
@@ -46,7 +46,7 @@ class ProductSeeder extends Seeder
           'image_link_1' => 'photos/reebook.png',
           'image_link_2' => 'photos/reebook.png',
           'image_link_3' => 'photos/reebook.png',
-          'shop_id' => 1,
+          'shop_id' => 2,
           'brand_id' => 1
         ],
 

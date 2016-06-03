@@ -128,3 +128,20 @@ function alert($alertType, $message) {
 
   echo $message.'</div>';
 }
+
+/*function checkboxList($list_class, $data) {
+  $i = 1;
+  echo '<div class="panel-body'.$list_class.'">';
+
+      foreach($data as $list) {
+        echo '<div class="checkbox"><label><input type="checkbox" class="';
+        $i ==1? 'cat-active': '' ;
+        echo '" id="cat-'.$list->id.'" value="" ';
+        $i ==1 ? 'checked': ''}}>;
+        echo '&nbsp;'.$list->name.'</label></div>';
+
+        $i++;
+      }
+
+  echo '</div>';
+}*/

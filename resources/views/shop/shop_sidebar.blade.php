@@ -1,4 +1,4 @@
-<div class="col-sm-3" id="scroller">
+<div class="col-sm-3">
 	<div class="row">
 
 		<div class="col-sm-12">
@@ -25,14 +25,16 @@
 			    <h3 class="panel-title">Categories</h3>
 			  </div>
 			  <div class="panel-body shop-categories">
-						@for($i = 1; $i <= 5; $i++)
+					<?php $i = 1; ?>
+						@foreach($shop->category as $sub)
 			      <div class="checkbox">
 							<label>
-								<input type="checkbox" name="name" value="" {{$i ==1? 'checked': ''}}>&nbsp;
-								Category {{$i}}
+								<input type="checkbox" class="{{$i ==1? 'cat-active': ''}}" id="cat-{{$sub->id}}" value="" {{$i ==1? 'checked': ''}}>&nbsp;
+								{{$sub->sub_category_name}}
 							</label>
 						</div>
-						@endfor
+						<?php $i++; ?>
+						@endforeach
 			  </div>
 			</div>
 		</div>
@@ -43,14 +45,7 @@
 			    <h3 class="panel-title">Brand</h3>
 			  </div>
 			  <div class="panel-body shop-brands">
-						@for($i = 1; $i <= 5; $i++)
-			      <div class="checkbox">
-							<label>
-								<input type="checkbox" name="name" value="" {{$i ==1? 'checked': ''}}>&nbsp;
-								Brand {{$i}}
-							</label>
-						</div>
-						@endfor
+
 			  </div>
 			</div>
 		</div>

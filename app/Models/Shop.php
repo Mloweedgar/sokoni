@@ -73,7 +73,7 @@ class Shop extends Model
 
     public function category() {
 
-      return $this->belongsToMany('App\Models\Category', 'shop_product_categories');
+      return $this->belongsToMany('App\Models\SubCategory', 'shop_categories');
     }
 
 

@@ -13,5 +13,9 @@ class ProductSubCategories {
     $this->sub_category = $sub_category;
   }
 
-  
+  public function getSubCategoriesByShop($id) {
+    return $this->sub_category->getByShopId($id);
+  }
+
+
 }

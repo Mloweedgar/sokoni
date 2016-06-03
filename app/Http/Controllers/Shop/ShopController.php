@@ -8,6 +8,8 @@ use App\Repositories\AppClasses\Shops as Shop;
 
 use App\Http\Controllers\Product\ProductCategoryController as Category;
 
+use App\Http\Controllers\Product\ProductSubCategoryController as SubCategory;
+
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -15,11 +17,13 @@ class ShopController extends Controller
 {
 		protected $shops;
 		protected $category;
+		protected $sub_category;
 
-    public function __construct(Shop $shops, Category $category) {
+    public function __construct(Shop $shops, Category $category, SubCategory $sub_category) {
 
     	$this->shop= $shops;
 			$this->sub_category = $category;
+			$this->sub_category = $sub_category;
 
     }
 
@@ -27,11 +31,9 @@ class ShopController extends Controller
 
     	$shop = $this->shop->getOne($id);
 
-			$category_list = $this->shop->getShopCategories($id);
-
     	return view('shop.get_shop')->with([
 																					'shop' => $shop,
-																					'category_list' => $category_list]);
+																				]);
     }
 
     public function getShopList() {
