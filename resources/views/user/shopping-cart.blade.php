@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div class="container">
+<div class="container" style="margin-top: 20px;">
   <div class="row">
     <div class="col-sm-9">
       <table class="table table-condensed">
@@ -47,29 +47,37 @@
       </table>
     </div>
     <div class="col-sm-3">
-      <div class="panel panel-default" style="margin-top: 20px; position: sticky;">
-        <div class="panel-body">
-          <ul class="list-unstyled text-center">
-            <li style="font-size: 20px;"><strong>Total</strong></li>
-            <li style="font-size: 23px;"><strong id="total">2000000</strong></li>
-            <hr>
-            <li>
-              <a href="#" class="btn btn-info">
-                <i class="fa fa-shopping-cart"></i>&nbsp;
-                Continue shopping
+      <h4>Summary</h4>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th>product cost</th>
+            <td id="total">2000000</td>
+          </tr>
+          <tr>
+            <th>delivery cost</th>
+            <td id="delivery">40000</td>
+          </tr>
+
+          <tr>
+            <th>Total cost</th>
+            <td id="grand-total">2040000</td>
+          </tr>
+
+          <tr>
+            <td>
+              <a href="#" class="btn btn-info btn-sm">
+                <i class="fa fa-shopping-cart"></i>&nbsp;Continue shopping
               </a>
-            </li>
-            <br>
-            <li>OR</li>
-            <br>
-            <li>
+            </td>
+            <td>
               <a href="#" class="btn btn-primary btn-sm">
                 <i class="fa fa-play"></i>&nbsp;Checkout
               </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>

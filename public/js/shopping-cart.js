@@ -13,6 +13,8 @@ $(document).ready(function() {
     var $price = '#price-';
     var $sub_total = '#sub-total-';
     var $total_id = $('#total');
+    var $delivery_id = $('#delivery');
+    var $grand_total_id = $('#grand-total');
 
     var id = $($quantity + 1);
     var num = Number(id.text());
@@ -27,7 +29,8 @@ $(document).ready(function() {
       $id.empty().append($quantity);
     }
 
-    function updateCartItem() {
+    function updateCartItem(e) {
+      e.preventDefault();
       //get item id
       var $id = getItemId($(this));
       var $sub_total_id = $($sub_total + $id);
@@ -45,14 +48,17 @@ $(document).ready(function() {
 
       //get original total value
       var $original_total = getItemValue($total_id);
+      var $delivery_cost = getItemValue($delivery_id);
 
       //increment quantity
       if($(this).hasClass($inc_class)) {
+
         if($item_quantity < 20) {
           $item_quantity++;
         }
 
       } else if($(this).hasClass($dec_class)) {
+
         if($item_quantity > 1) {
           $item_quantity--;
         }
@@ -66,12 +72,13 @@ $(document).ready(function() {
       //Compute total
       var $_total = computeTotal($original_sub_total, $_sub_total, $original_total);
 
+      //compute grand total
+      var $_grand_total = computeGrandTotal($_total, $delivery_cost);
+
       render($quantity_id, $item_quantity);
       render($sub_total_id, $_sub_total);
-      render($total_id,$_total)
-
-
-      console.log($original_total);
+      render($total_id,$_total);
+      render($grand_total_id, $_grand_total);
 
     }
 
@@ -91,6 +98,10 @@ $(document).ready(function() {
 
     function computeTotal($original_sub_total, $new_sub_total, $original_total) {
       return $original_total + $new_sub_total - $original_sub_total;
+    }
+
+    function computeGrandTotal($total, $delivery) {
+      return $total + $delivery
     }
 
 
