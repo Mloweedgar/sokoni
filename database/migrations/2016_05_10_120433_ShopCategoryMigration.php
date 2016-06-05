@@ -29,6 +29,6 @@ class ShopCategoryMigration extends Migration
      */
     public function down()
     {
-        Schema::drop('shop_categories');
+        Schema::drop('shop_product_categories');
     }
 }
