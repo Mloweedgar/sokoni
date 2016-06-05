@@ -2,37 +2,26 @@
 
 namespace App\Repositories\AppClasses;
 
+use App\Repositories\Eloquents\ProductRepository as Product;
+
 class Products {
 
-  public function __construct() {
+  protected $product;
 
-
+  public function __construct(Product $product) {
+    $this->product = $product;
   }
 
-  public function getAll() {
-
-    /*
-     * Organize the list into 3x3 array for slider display
-     */
-    $i = $j = 1;
-
-    foreach ($this->shop->allShops() as $value) {
-
-      if($j == 4) {
-
-        $i++;
-        $j = 1;
-      }
-
-      $shop_array[$i][$j]['id'] = $value->id;
-      $shop_array[$i][$j]['shop_name'] = $value->shop_name;
-
-
-      $j++;
-
-
-    }
-
-    return $shop_array;
+  public function getProduct($id) {
+    return $this->product->getOne($id);
   }
+
+  public function getRelatedProductsBySubCategory($sub_category_id, $product_id) {
+    return $this->product->getRelatedBySubCategory($sub_category_id, $product_id);
+  }
+
+  public function getRelatedProductByShop($shop_id, $product_id, $limit) {
+    return $this->product->getRelatedByShop($shop_id, $product_id, $limit);
+  }
+
 }

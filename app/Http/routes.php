@@ -34,7 +34,7 @@ Route::get('/facebookLogin', 'Auth\FacebookAuthController@facebookLogin');
 
 
 Route::get('/shop/{id}', 'Shop\ShopController@getShop');
-Route::get('/product', 'Product\ProductController@index');
+Route::get('/product/{id}', 'Product\ProductController@render');
 
 Route::get('/shop/reviews/{id}', 'Shop\ShopReviewController@getReview');
 

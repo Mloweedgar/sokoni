@@ -23,4 +23,5 @@ class ProductSubCategoryController extends Controller
 
     return $this->sub_category->getSubCategoriesByShop($shop_id);
   }
+
 }

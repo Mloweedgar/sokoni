@@ -16,7 +16,7 @@ class ShopRepository {
 
 	public function oneShop($id) {
 
-		return Shop::find($id);
+		return Shop::with('reviewCount', 'averageRating')->find($id);
 	}
 
 	public function allReviewsPerShop($id) {

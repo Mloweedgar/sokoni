@@ -6,21 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 use Carbon\Carbon;
 
-class ShopReview extends Model
+class ProductReview extends Model
 {
-
-    public function shop() {
-
-    	return $this->belongsTo('App\Models\ShopReview');
+    public function product() {
+      return $this->belongsTo('App\Models\Product');
     }
 
     public function getWrittenOnAttribute($value) {
 
     	return Carbon::createFromTimestamp(strtotime($value))->diffForHumans();
-    }
-
-    public function user() {
-
-    	return $this->belongsTo('App\Models\User');
     }
 }

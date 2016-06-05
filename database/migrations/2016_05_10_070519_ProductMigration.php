@@ -15,16 +15,15 @@ class ProductMigration extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('image_link_1');
-            $table->string('image_link_2');
-            $table->string('image_link_3');
-            $table->text('description')->nullable();
-            $table->decimal('discount_factor')->nullable();
-            $table->integer('quantity_stocked')->nullable();
+            $table->text('description');
+            $table->decimal('discount_factor');
+            $table->integer('quantity_stocked');
             $table->integer('shop_id')->unsigned();
             $table->integer('brand_id')->unsigned();
+            $table->integer('sub_category_id')->unsigned();
             $table->foreign('shop_id')->references('id')->on('shops');
             $table->foreign('brand_id')->references('id')->on('brands');
+            $table->foreign('sub_category_id')->references('id')->on('sub_categories');
             $table->timestamps();
         });
     }

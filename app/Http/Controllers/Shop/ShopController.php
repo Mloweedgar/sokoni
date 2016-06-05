@@ -27,13 +27,14 @@ class ShopController extends Controller
 
     }
 
+		public function render($id) {
+				$shop = $this->getShop($id);
+				return view('shop.get_shop', compact('shop'));
+		}
+
     public function getShop($id) {
 
-    	$shop = $this->shop->getOne($id);
-
-    	return view('shop.get_shop')->with([
-																					'shop' => $shop,
-																				]);
+    	return $this->shop->getOne($id);
     }
 
     public function getShopList() {

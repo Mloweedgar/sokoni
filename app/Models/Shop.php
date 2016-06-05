@@ -34,6 +34,7 @@ class Shop extends Model
     			->groupBy('shop_id');
     }
 
+
     public function getReviewCountAttribute() {
     	/*
     	 * Load the relation if not loaded
