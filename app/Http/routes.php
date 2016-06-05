@@ -33,7 +33,7 @@ Route::auth();
 Route::get('/facebookLogin', 'Auth\FacebookAuthController@facebookLogin');
 
 
-Route::get('/shop/{id}', 'Shop\ShopController@getShop');
+Route::get('/shop/{id}', 'Shop\ShopController@getShop')->middleware('cors');
 Route::get('/product/{id}', 'Product\ProductController@render')->middleware('cors');
 
 Route::get('/shop/reviews/{id}', 'Shop\ShopReviewController@getReview');
