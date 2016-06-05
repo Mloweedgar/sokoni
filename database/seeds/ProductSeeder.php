@@ -19,6 +19,7 @@ class ProductSeeder extends Seeder
           'shop_id' => 1,
           'brand_id' => 1,
           'sub_category_id' => 1,
+          'description' => 'Lorem Tupos'
         ],
 
         2 => [
@@ -26,6 +27,7 @@ class ProductSeeder extends Seeder
           'shop_id' => 2,
           'brand_id' => 1,
           'sub_category_id' => 1,
+          'description' => 'Lorem Tupos'
         ],
 
         3 => [
@@ -33,6 +35,7 @@ class ProductSeeder extends Seeder
           'shop_id' => 1,
           'brand_id' => 1,
           'sub_category_id' => 1,
+          'description' => 'Lorem Tupos'
         ],
 
         4 => [
@@ -40,6 +43,7 @@ class ProductSeeder extends Seeder
           'shop_id' => 2,
           'brand_id' => 1,
           'sub_category_id' => 1,
+          'description' => 'Lorem Tupos'
         ],
 
       ];
