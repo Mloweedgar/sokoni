@@ -20,9 +20,9 @@ class Cors
     {
 
         $headers = [
-            'Access-Control-Allow-Origin'      => $_SERVER['HTTP_ORIGIN'],
+            //'Access-Control-Allow-Origin'      => $_SERVER['HTTP_ORIGIN'],
             // CORS doesn't accept Access-Control-Allow-Origin = * for security reasons
-            //'Access-Control-Allow-Origin'    => '*',
+            'Access-Control-Allow-Origin'    => '*',
             'Access-Control-Allow-Methods'     => 'POST, OPTIONS',
             //'Access-Control-Allow-Methods'   => 'POST, GET, OPTIONS, PUT, DELETE',
             'Access-Control-Allow-Credentials' => 'true',
