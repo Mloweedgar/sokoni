@@ -15,18 +15,22 @@ class BrandSeeder extends Seeder
     {
       $brand = [
         1 => [
-          'name' => 'reebook'
+          'name' => 'reebook',
+          'logo' => 'reebook'
         ],
 
         2 => [
           'name' => 'manga',
+          'logo' => 'manga'
         ],
 
         3 => [
           'name' => 'hot basic',
+          'logo' => 'hot basic'
         ],
         4 => [
           'name' => 'dickies',
+          'logo' => 'dickies'
         ],
       ];
 
