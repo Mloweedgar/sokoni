@@ -4,7 +4,6 @@ $(document).ready(function() {
 		//$("#ex2").slider({});
 		var slider = new Slider('#ex2', {});
 
-
 		$('.layer').mouseenter(function() {
 
 			var id = $(this).attr('id');

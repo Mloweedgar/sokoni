@@ -25,7 +25,16 @@ Route::get('/wishlist',function(){
 Route::get('/get-brands/{id}', 'Product\ProductBrandController@getByCategoryId');
 
 Route::get('/profile/shopping_buddy',function(){
+Route::get('/orders',function(){
+    return view('user.order');
+});
+
+Route::get('/shopping_buddy',function(){
     return view('user.shopping_buddy');
+});
+
+Route::get('/shopping-cart', function() {
+  return view('user.shopping-cart');
 });
 
 Route::auth();

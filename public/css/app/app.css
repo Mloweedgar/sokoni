@@ -150,30 +150,40 @@ body {
 	margin-top: 10px;
 }
 
+.dropdown-category-tabs {
+
+  border-bottom: none;
+  padding-top: 4px;
+  border-radius: 0px;
+  border-right: 1px solid #ddd;
+}
+
 .shop-tabs {
   border-bottom: none;
   border-right: 1px solid #ddd;
-  padding-top: 2px;
+  padding-top: 4px;
 }
 
-.shop-tabs>li {
+.shop-tabs > li,
+.dropdown-category-tabs > li {
   float: none;
   margin-bottom: 2px;
-}
-
-.shop-tabs >li {
   margin-right: -1px;
 }
 
 .shop-tabs > li.active > a,
 .shop-tabs > li.active > a:hover,
-.shop-tabs > li.active > a:focus {
+.shop-tabs > li.active > a:focus,
+.dropdown-category-tabs > li.active > a,
+.dropdown-category-tabs > li.active > a:hover,
+.dropdown-category-tabs > li.active > a:focus {
   border-bottom-color: #ddd;
   border-right-color: transparent;
 }
 
-.shop-tabs > li > a {
-  border-radius: 4px 0 0 4px;
+.shop-tabs > li > a,
+.dropdown-category-tabs > li > a {
+  border-radius: 0px;
   margin-right: 0;
   display:block;
 }
@@ -290,20 +300,29 @@ a {
 	border-bottom: solid 2px #252525;
 }
 
-.dropdown:hover .category-menu{
 
+.category-dropdown-content {
+  //margin-top: 5px;
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  width: 1140px;
+  background: #fff;
+  height: 400px;
+  border: solid 1px #ddd;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.category-dropdown:hover .category-dropdown-content{
 	display: block;
 }
 
-.category-menu:hover .subcategory-menu {
-
-	display: block;
-}
 
 .dropdown-menu {
 	width: 100%;
-	border-top-left-radius: 0px;
-	border-top-right-radius: 0px;
+	border-radius: 0px;
 	margin-top: 0px;
 	padding-top: 0px;
 	margin-bottom: 0px;
@@ -316,15 +335,17 @@ a {
  	border-bottom: solid 1px #DDDDDD;
  }
 
- .subcategory-menu {
-
- 	left: 100%;
- 	top: 0%;
- 	height: auto;
- 	width: 950px;
- 	padding-left: 30px;
- 	padding-top: 10px;
- 	padding-bottom: 10px;
+ .dropdown-subcategory {
+   //position: relative;
+    left: 100%;
+    top: 0;
+    height: 500px;
+    width: 970px;
+    padding-left: 30px;
+   	padding-top: 10px;
+   	padding-bottom: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
  }
 
  .app-shop-panel {
