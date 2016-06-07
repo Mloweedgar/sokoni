@@ -1,6 +1,4 @@
-
 <!--styles-->
-<<<<<<< HEAD
 <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap/bootstrap.min.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('css/app/app.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('css/app/product.css')}}">

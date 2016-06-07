@@ -24,7 +24,9 @@ class ProductController extends Controller
     }
 
     public function render($id) {
-      $product = $this->getProductById($id);
+      $product = $this->product->getProduct($id);
+
+      //dd($product);
 
       $related_products_sub_category = $this->product->getRelatedProductsBySubCategory($product->sub_category_id, $product->id);
 
@@ -33,11 +35,10 @@ class ProductController extends Controller
       $related_products_shop = $this->product->getRelatedProductByShop($product->shop_id,$product->id, 3);
 
       if($this->request->ajax()) {
-        return response()->success(compact('product'));
-      } else return response()->success(compact('product','related_shop', 'related_products_sub_category', 'related_products_shop'));//view('product.index', compact('product'));
+        return response()->success(compact('product','related_shop', 'related_products_sub_category', 'related_products_shop'));
+      }
+
+      return view('product.index',compact('product','related_shop', 'related_products_sub_category', 'related_products_shop'));
     }
 
-    public function getProductById($id) {
-      return $this->product->getProduct($id);
-    }
 }

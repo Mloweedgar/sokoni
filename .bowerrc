@@ -1,7 +1,3 @@
 {
-<<<<<<< HEAD
-  "directory": "public"
-=======
   "directory" : "public"
->>>>>>> development
 }

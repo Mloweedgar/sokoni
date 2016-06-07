@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar">
   <div class="container">
       <div class="app-header">
           <div class="navbar-header">

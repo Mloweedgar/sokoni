@@ -39,25 +39,21 @@
           @include('product.report-product')
         </div>
       </div>
-      <h4>Product Name</h4>
+      <h4>{{$product->name}}</h4>
       <p>
         Price:&nbsp;
-        <strong style="font-size: 15px; text-decoration: line-through;" class="text-warning">TSH&nbsp;3000000</strong>&nbsp;
-        <strong style="font-size: 17px;"><span class="featured-price">Tsh&nbsp;750000</span></strong>
+      <!--  <strong style="font-size: 15px; text-decoration: line-through;" class="text-warning">TSH&nbsp;3000000</strong>&nbsp;-->
+        <strong style="font-size: 17px;"><span class="featured-price">TZS&nbsp;{{$product->latestPrice->price}}</span></strong>
       </p>
-      <p>{{rating(4)}}</p>
+      <p>{{rating($product->averageRating->rating)}}</p>
       <h4>Description</h4>
-      <p>
-        You can't afford what you are dying for? Dont give up on yourself!
-          Earn shopping points for unlimited shopping discount.
-          All you need is to tell a friend to tell a friend
-      </p>
+      <p>{{$product->description}}</p>
       <div class="form-group">
         <div class="input-group">
           <span class="input-group-addon"><strong>Quantity</strong></span>
           <input type="number" min="1" max="20" class="form-control" style="width: 70px;">
         </div>
-        <p class="text-primary"><small>20 items left</small></p>
+        <p class="text-primary"><small>{{$product->quantity_stocked}} items left</small></p>
       </div>
 
       <ul class="list-inline">
