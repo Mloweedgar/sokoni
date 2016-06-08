@@ -15,6 +15,7 @@ class ProductPhotosMigration extends Migration
         Schema::create('product_photos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('link');
+            $table->string('privilege' 10);
             $table->integer('product_id')->unsigned();
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();

@@ -31,6 +31,6 @@ class HomeController extends Controller
     {
         $shop_list = $this->shop->getShopList();
 
-        return view('home.home')->with(['shop_list' => $shop_list]);
+        return view('home.home', compact('shop_list'));
     }
 }

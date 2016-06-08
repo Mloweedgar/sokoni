@@ -45,8 +45,8 @@ class Shops {
 		return $shop_array;
 	}
 
-	public function getShopCategories($id) {
-
-		return $this->shop->getCategoriesByShop($id);
+	public function all() {
+		return $this->shop->allShops();
 	}
+
 }

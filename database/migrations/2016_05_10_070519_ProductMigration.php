@@ -16,8 +16,9 @@ class ProductMigration extends Migration
             $table->increments('id');
             $table->string('name');
             $table->text('description');
-            $table->decimal('discount_factor')->nullable();
+            $table->decimal('discount', 3,2)->nullable();
             $table->integer('quantity_stocked')->nullable();
+            $table->tinyInteger('hot');
             $table->integer('shop_id')->unsigned();
             $table->integer('brand_id')->unsigned();
             $table->integer('sub_category_id')->unsigned();

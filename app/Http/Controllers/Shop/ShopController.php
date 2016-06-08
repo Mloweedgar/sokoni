@@ -34,11 +34,19 @@ class ShopController extends Controller
 
     public function getShop($id) {
 
-    	return $this->shop->getOne($id);
+    	$shop = $this->shop->getOne($id);
+			return response()->success(compact('shop'));
     }
 
     public function getShopList() {
 
-    	return $this->shop->getAll();
+    	$shops = $this->shop->getAll();
+			//return response()->success(compact('shops'));
+			return $shops;
     }
+
+		public function getAll() {
+			$shops = $this->shop->all();
+			return response()->success(compact('shops'));
+		}
 }

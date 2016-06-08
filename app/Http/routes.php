@@ -40,7 +40,7 @@ Route::auth();
 
 Route::get('/facebookLogin', 'Auth\FacebookAuthController@facebookLogin');
 
-
+Route::get('/shop', 'Shop\ShopController@getAll')->middleware('cors');
 Route::get('/shop/{id}', 'Shop\ShopController@getShop')->middleware('cors');
 Route::get('/product/{id}', 'Product\ProductController@render')->middleware('cors');
 

@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+
+    protected $appends = ['review_count','average_rating', 'latest_price'];
+
     public function shop() {
 
       return $this->belongsTo('App\Models\Shop');
@@ -21,28 +24,43 @@ class Product extends Model
     }
 
     public function photos() {
-      return $this->hasMany('App\Models\ProductPhoto')->select(['product_id','link']);
+      return $this->hasMany('App\Models\ProductPhoto');
     }
 
     public function reviews() {
-      return $this->hasMany('App\Models\ProductReview')->select(['product_id', 'review', 'written_on']);
+      return $this->hasMany('App\Models\ProductReview');
     }
 
-    public function averageRating() {
-
-      return $this->hasOne('App\Models\ProductRating')
-              ->select(DB::raw('product_id, avg(rating) as rating'))
-              ->groupBy('product_id');
+    public function ratings() {
+      return $this->hasMany('App\Models\ProductRating');
     }
 
-    public function reviewCount() {
-
-      return $this->hasOne('App\Models\ProductReview')
-              ->select(DB::raw('product_id, count(review) as count'))
-              ->groupBy('product_id');
+    public function getAverageRatingAttribute() {
+      return $this->ratings()->avg('rating');
     }
 
-    public function latestPrice() {
-      return $this->hasOne('App\Models\ProductPrice')->latest()->select(['product_id', 'price']);
+    public function getReviewCountAttribute() {
+      return $this->reviews()->count();
     }
+
+    public function getDiscountFactorAttribute($value) {
+      return $value*100;
+    }
+
+    public function price() {
+      return $this->hasMany('App\Models\ProductPrice')->select(['product_id', 'price']);
+    }
+
+    public function getLatestPriceAttribute() {
+      return $this->price()->latest()->first();
+    }
+
+    public function primaryPhoto() {
+      return $this->photos()->primary();
+    }
+
+    public function scopeIsHot($query) {
+      return $query->where('hot',1);
+    }
+
 }
