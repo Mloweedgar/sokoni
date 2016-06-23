@@ -8,7 +8,13 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
         "laravel/Socialite": "^2.0",
-        "nesbot/carbon": "^1.21"
+        "nesbot/carbon": "^1.21",
+        "infyomlabs/laravel-generator": "dev-master",
+        "laravelcollective/html": "5.2.*",
+        "infyomlabs/core-templates": "dev-master",
+        "infyomlabs/swagger-generator": "dev-master",
+        "jlapp/swaggervel": "dev-master",
+        "doctrine/dbal": "~2.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

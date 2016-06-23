@@ -158,6 +158,15 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\ResponseMacroServiceProvider::class,
 
+        /*
+         *Infyom Service providers...
+         */
+        Collective\Html\HtmlServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
+        \InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
+        \InfyOm\CoreTemplates\CoreTemplatesServiceProvider::class,
+
     ],
 
     /*
@@ -204,6 +213,9 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Form'      => Collective\Html\FormFacade::class,
+        'Html'      => Collective\Html\HtmlFacade::class,
+        'Flash'     => Laracasts\Flash\Flash::class
 
     ],
 
