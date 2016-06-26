@@ -11,3 +11,6 @@
 
 
 
+
+
+Route::resource('phones', 'PhoneAPIController');

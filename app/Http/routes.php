@@ -13,28 +13,8 @@
 
 Route::get('/', 'HomeController@index');
 
-// this is for profile
-Route::get('/profile', function () {
-    return view('user.index');
-});;
-
-Route::get('/wishlist',function(){
-    return view('user.wishlist');
-});
-
 Route::get('/get-brands/{id}', 'Product\ProductBrandController@getByCategoryId');
 
-Route::get('/orders',function(){
-    return view('user.order');
-});
-
-Route::get('/shopping_buddy',function(){
-    return view('user.shopping_buddy');
-});
-
-Route::get('/shopping-cart', function() {
-  return view('user.shopping-cart');
-});
 
 Route::auth();
 
@@ -43,8 +23,12 @@ Route::get('/facebookLogin', 'Auth\FacebookAuthController@facebookLogin');
 Route::get('/shop', 'Shop\ShopController@getAll')->middleware('cors');
 Route::get('/shop/{id}', 'Shop\ShopController@getShop')->middleware('cors');
 Route::get('/product/{id}', 'Product\ProductController@render')->middleware('cors');
-
 Route::get('/shop/reviews/{id}', 'Shop\ShopReviewController@getReview');
+
+//user infomation
+Route::resource('foo.bar', 'FooBarController'); // For accessing Bar related with Foo
+Route::resource('foo.bar.bez', 'FooBarBezController'); // For accessing Bez related with Foo and Bar
+Route::resource('foo.bar.bez.biz', 'FooBarBezBizController'); // For accessing Biz related with Foo, Bar and Bez
 
 
 //for emails
@@ -88,3 +72,6 @@ Route::group(['prefix' => 'api', 'namespace' => 'API'], function () {
         require config('infyom.laravel_generator.path.api_routes');
     });
 });
+
+
+Route::resource('phones', 'PhoneController');
